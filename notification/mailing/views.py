@@ -47,7 +47,7 @@ def send_notification(request):
             retry = 0
             sent = False
             ## Implementing mailing with 3 retries
-            while retry<4 and not sent:
+            while retry<11 and not sent:
                 if retry>0:
                     print('retrying....')
                 retry+=1
@@ -55,7 +55,7 @@ def send_notification(request):
                     send_email(subject,message,to)
                     sent = True
                 except SMTPException as e:
-                    if retry==4:
+                    if retry==11:
                         error_log[d] = [to,str(e)]
                 except Exception as e:
                     if retry==4:
