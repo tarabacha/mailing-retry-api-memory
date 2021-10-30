@@ -18,7 +18,7 @@ from django.urls import path
 from mailing.views import send_notification, search, report
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+#     path('admin/', admin.site.urls),
     path('send/',send_notification,name='send'),
     path('search/',search,name='search'),
     path('report/',report,name='report')
