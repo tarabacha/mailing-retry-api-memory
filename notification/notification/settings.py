@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+## CELERY
+CELERY_BROKER_URL = 'ampq://localhost'
 
 # Application definition
 
